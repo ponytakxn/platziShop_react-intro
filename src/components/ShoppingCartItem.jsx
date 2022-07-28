@@ -1,13 +1,15 @@
 import React from 'react';
-import '../styles/ShoppingCartItem.scss';
+import '@styles/ShoppingCartItem.scss';
+
+import caja from '@extras/caja.png';
 
 const ShoppingCartItem = () => {
 	return (
 		<div className="ShoppingCartItem">
 			<figure>
-				<img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
+				<img src={caja} alt="cajita" />
 			</figure>
-			<p>Bike</p>
+			<p>Box</p>
 			<p>$30,00</p>
 		</div>
 	);

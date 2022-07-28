@@ -1,16 +1,19 @@
 import React from 'react';
-import '../styles/ProductInfo.scss';
+import '@styles/ProductInfo.scss';
+
+import add_cart from '@icons/bt_add_to_cart.svg';
+import caja from '@extras/caja.png';
 
 const ProductInfo = () => {
 	return (
 		<>
-			<img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
+			<img src={caja} alt="cajita" />
 			<div className="ProductInfo">
 				<p>$35,00</p>
-				<p>Bike</p>
-				<p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
+				<p>Box</p>
+				<p>Cajita chikita, no caben tus maquillajes we, guarda accesorios, no sé, PERO ES CHIKITA!</p>
 				<button className="primary-button add-to-cart-button">
-					<img src="./icons/bt_add_to_cart.svg" alt="add to cart" />
+					<img src={add_cart} alt="add to cart" />
 					Add to cart
 				</button>
 			</div>

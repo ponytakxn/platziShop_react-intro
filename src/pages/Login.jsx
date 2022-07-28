@@ -1,26 +1,46 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../styles/Login.scss';
 
+import logo from '@logos/logo_yard_sale.svg';
+
 const Login = () => {
-    return (
-        <div className="login">
-        <div className="form-container">
-            <img src={require("../assets/Platzi_YardSale_Logos/logo_yard_sale.svg")} alt="logo" className="logo" />
-            <h1 className="title">Create a new password</h1>
-            <p className="subtitle">Enter a new password for your account</p>
-            <form action="/" className="form">
-                <label for="password" className="label">Password</label>
-                <input type="password" id="password" placeholder="*********" className="input input-password" />
+	const form = useRef(null);
 
-                <label for="new-password" className="label">Re-enter password</label>
-                <input type="password" id="new-password" placeholder="*********" className="input input-password" />
+	const handleSubmit = () => {
+		const formData = new FormData(form.current);
+		const data = {
+			usename: formData.get('email'),
+			password: formData.get('password')
+		}
+		console.log(data);
+	}
 
-                <input type="submit" value="Confirm" className="primary-button login-button" />
-
-            </form>
-        </div>
-        </div>
-    );
+	return (
+		<div className="Login">
+			<div className="Login-container">
+				<img src={logo} alt="logo" className="logo" />
+				<form action="/" className="form" ref={form}>
+					<label htmlFor="email" className="label">Email address</label>
+					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
+					<label htmlFor="password" className="label">Password</label>
+					<input type="password" name="password" placeholder="*********" className="input input-password" />
+					<button
+						onClick={handleSubmit}
+						className="primary-button login-button"
+                        type='button'>
+						Log in
+					</button>
+					<a href="/">Forgot my password</a>
+				</form>
+				<button
+					className="secondary-button signup-button"
+                    type='button'
+				>
+					Sign up
+				</button>
+			</div>
+		</div >
+	);
 }
 
 export { Login };
