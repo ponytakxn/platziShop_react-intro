@@ -5,6 +5,9 @@ nav {
 	justify-content: space-between;
 	padding: 0 24px;
 	border-bottom: 1px solid var(--very-light-pink);
+	position: sticky;
+	top: 0;
+	background-color: white;
 }
 .menu {
 	display: none;
@@ -47,6 +50,7 @@ nav {
 }
 .navbar-shopping-cart {
 	position: relative;
+	cursor: pointer;
 }
 .navbar-shopping-cart div {
 	width: 16px;

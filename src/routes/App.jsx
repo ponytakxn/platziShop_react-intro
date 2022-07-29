@@ -17,9 +17,13 @@ import '@styles/global.css';
 
 const App = () => {
 	const initialState = useInitialState();
-	
+	const {
+		toggleOrders,
+		setToggleOrders,
+	} = React.useContext(AppContext);
+
 	return (
-		<AppContext.Provider value = { initialState }>
+		<AppContext.Provider value = {initialState}>
 			<BrowserRouter>
 				<Layout>
 					<Switch>

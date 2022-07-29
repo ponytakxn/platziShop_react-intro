@@ -5,7 +5,14 @@
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
+	background-color: white;
 	right: 0;
+	top: 3.8rem;
+	max-height: 80vh;
+	bottom: auto;
+	border-radius: 6px;
+	border: 1px solid var(--very-light-pink);
+	overflow: auto;
 }
 .title-container {
 	display: flex;
@@ -13,6 +20,7 @@
 .title-container img {
 	transform: rotate(180deg);
 	margin-right: 14px;
+	cursor: pointer;
 }
 .title {
 	font-size: var(--lg);
@@ -27,6 +35,8 @@
 	margin-bottom: 24px;
 	border-radius: 8px;
 	padding: 0 24px;
+	position: relative;
+	bottom: 0;
 }
 .order p:nth-child(1) {
 	display: flex;
@@ -51,6 +61,11 @@
 	font-size: var(--md);
 	font-weight: bold;
 	height: 50px;
+}
+
+.item-content {
+	max-height: 50vh;
+	overflow: auto;
 }
 @media (max-width: 640px) {
 	.MyOrder {

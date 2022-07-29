@@ -50,7 +50,7 @@ opacity: 0.8;
 }
 
 .hide {
-    animation: fadeOut 3701ms infinite;
+    animation: fadeOut 2050ms infinite;
 }
 
 /* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
@@ -139,44 +139,44 @@ opacity: 0.8;
     0%{
         opacity: 0;
     }
-    33%{
+    32%{
         opacity: 0;
     }
-    34%{
+    33%{
         opacity: 1;
         transform: translateX(6rem) translateY(-4rem);
     }
-    35%{
+    34%{
         opacity: 0;
         transform: translateX(0rem) translateY(0rem);
+    }
+    35%{
+        opacity: 1;
+        transform: translateX(6rem) translateY(-4rem);
     }
     36%{
-        opacity: 1;
-        transform: translateX(4rem) translateY(-2.5rem);
-    }
-    37%{
         opacity: 0;
         transform: translateX(0rem) translateY(0rem);
     }
-    49%{
+    48%{
         opacity: 0;
     }
-    50%{
+    49%{
+        opacity: 1;
+    }
+    72%{
         opacity: 1;
     }
     73%{
-        opacity: 1;
-    }
-    74%{
         opacity: 0;
     }
-    76%{
+    75%{
+        opacity: 1;
+    }
+    98%{
         opacity: 1;
     }
     99%{
-        opacity: 1;
-    }
-    100%{
         opacity: 0;
     }
 }
